@@ -1,0 +1,15 @@
+---
+- id: ${WEBHOOK_SECRET}/docker-webhook
+  execute-command: "/etc/webhook/assets/scripts/restart-project.sh"
+  command-working-directory: "/etc/webhook/assets/scripts"
+  response-message: A payload recieved
+  pass-arguments-to-command:
+  - source: payload
+    name: repository.name
+  trigger-rule:
+    match:
+      type: value
+      value: latest
+      parameter:
+        source: payload
+        name: push_data.tag
