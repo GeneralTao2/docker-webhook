@@ -1,0 +1,1 @@
+'generaltao725/docker-webhook' is a service that allows you to keep your docker compose projects up-to-date. It lestens for DockerHub webhooks, and on an incoming webhook it pulls an immage, extracts a docker-compose file and then starts/restarts the docker compose project.
