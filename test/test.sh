@@ -8,9 +8,7 @@ MATCH_PATTERN=$1
 
 image_name=${PWD##*/}
 
-if [ -n "$BUILD_IMAGE" ]; then
-  docker build -t "generaltao725/$image_name:test" $(dirname $(pwd))
-fi
+docker build -t "generaltao725/$image_name:test" $(dirname $(pwd))
 
 find_args="-mindepth 1 -maxdepth 1 -type d"
 if [ -n "$MATCH_PATTERN" ]; then
