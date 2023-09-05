@@ -1,9 +1,12 @@
 name: Release Docker Image
 
 on:
-  push:
+  workflow_run:
+    workflows: [Run Integration Tests]
     branches:
-      - main
+      - 'develop'
+    types:
+      - completed
 
 jobs:
   push_to_registry:
