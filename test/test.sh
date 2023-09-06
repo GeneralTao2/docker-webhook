@@ -8,6 +8,7 @@ MATCH_PATTERN=$1
 
 image_name=${PWD##*/}
 
+echo "====generaltao725/$image_name:test"
 docker build -t "generaltao725/$image_name:test" $(dirname $(pwd))
 
 find_args="-mindepth 1 -maxdepth 1 -type d"
