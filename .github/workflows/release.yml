@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: [Run Integration Tests]
     branches:
-      - 'develop'
+      - main
     types:
       - completed
 
