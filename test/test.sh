@@ -2,20 +2,13 @@
 
 set -e
 
-MATCH_PATTERN=$1
-
 . ./util.sh
 
 image_name=$(basename "$(dirname "$(pwd)")")
 
 docker build -t "generaltao725/$image_name:test" $(dirname $(pwd))
 
-find_args="-mindepth 1 -maxdepth 1 -type d"
-if [ -n "$MATCH_PATTERN" ]; then
-  find_args="$find_args -name $MATCH_PATTERN"
-fi
-
-for dir in $(find $find_args | sort); do
+for dir in $(find -mindepth 1 -maxdepth 1 -type d | sort); do
   dir=$(echo "$dir" | cut -c 3-)
   echo "################################################"
   echo "Now running ${dir}"
