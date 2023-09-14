@@ -18,7 +18,7 @@ for dir in $(find -mindepth 1 -maxdepth 1 -type d | sort); do
   test="${dir}/run.sh"
   eval "$test"
 
-  remove_docker_compose_project
+  remove_docker_compose_project "${dir}/docker-compose.yml"
   
   echo ""
   echo "$test passed"
