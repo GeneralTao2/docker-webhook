@@ -18,6 +18,7 @@ docker pull "$REPO_NAME"
 rm -r "$PROJECT_CACHE_PATH"
 # Extrect files placed in docker directory from image into casche dir
 ./extract-file.sh "$REPO_NAME" docker "$PROJECT_CACHE_PATH"
+chown -R 1000:1000 "$PROJECT_CACHE_PATH"
 # Copy there env files if any provided
 if [ -d "$PROJECT_ENVS_PATH" ]; then
     echo "Env file for project [$PROJECT_NAME] was found"
