@@ -18,6 +18,9 @@ responce=$(curl -X POST \
   -d '{
       "repository": {
           "name": "webhook-test-image"
+      },
+      "push_data": {
+          "tag": "latest"
       }
   }' \
   http://localhost:9000/hooks/mysecret/docker-webhook)

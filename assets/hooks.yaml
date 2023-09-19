@@ -6,3 +6,10 @@
   pass-arguments-to-command:
   - source: payload
     name: repository.name
+  trigger-rule:
+    match:
+      type: value
+      value: latest
+      parameter:
+        source: payload
+        name: push_data.tag
