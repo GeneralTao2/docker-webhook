@@ -3,7 +3,7 @@
 The image is based on [thecatlady/webhook](https://hub.docker.com/r/thecatlady/webhook) image and wraps [adnanh/webhook](https://github.com/adnanh/webhook) application.
 
 ### Usage
-An example of the usage of the image can be found in a [test](test\run-project-on-post-request\docker-compose.yml).
+An example of the usage of the image can be found in a [test](test/run-project-on-post-request/docker-compose.yml).
 
 ### Prerequiremnts 
  - Target images must have a docker compose project placed into `/docker` directory of the image
