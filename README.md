@@ -1,4 +1,4 @@
-[generaltao725/docker-webhook](https://hub.docker.com/repository/docker/generaltao725/docker-webhook/general) is a docker image that allows you to keep your docker compose projects up-to-date. It listens for DockerHub webhooks, and on an incoming webhook, it pulls an image, extracts a docker-compose file, and then starts/restarts the docker compose project.
+[generaltao725/docker-webhook](https://hub.docker.com/repository/docker/generaltao725/docker-webhook/general) is a docker image that allows you to keep your docker compose projects up-to-date. It listens for DockerHub webhooks, and on an incoming webhook, it pulls an image, extracts the docker-compose file, and then starts/restarts the docker compose project.
 
 The image is based on [thecatlady/webhook](https://hub.docker.com/r/thecatlady/webhook) image and wraps [adnanh/webhook](https://github.com/adnanh/webhook) application.
 
